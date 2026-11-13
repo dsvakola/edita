@@ -20,7 +20,9 @@
     "art": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/make-installer-art.ps1",
     "icons": "tauri icon assets/icon.png -o src-tauri/icons",
     "start": "tauri dev",
-    "dist": "pnpm run art && node scripts/installer-license.js && tauri build"
+    "dist": "pnpm run art && node scripts/installer-license.js && tauri build",
+    "store-art": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/make-store-art.ps1",
+    "msix": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/make-msix.ps1"
   },
   "devDependencies": {
     "@codemirror/autocomplete": "^6.20.3",

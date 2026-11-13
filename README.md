@@ -27,7 +27,7 @@ the Electron version 1.2.14 took about 106 MB). Edita uses Microsoft Edge WebVie
 Windows 10 and 11; the installer downloads it only if it is missing. The installer lets the user pick the
 install folder and adds Start menu and desktop shortcuts. It is not code-signed yet, so Windows SmartScreen
 shows "Windows protected your PC" the first time: click **More info › Run anyway**.
-For publishing on the Microsoft Store, see [STORE.md](STORE.md).
+For publishing on the Microsoft Store, see [STORE.md](STORE.md) and the listing material in [store-listing](store-listing/).
 
 ## Features
 

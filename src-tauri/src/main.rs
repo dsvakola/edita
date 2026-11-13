@@ -571,6 +571,14 @@ mod win {
         unsafe { SendInput(1, &i, size_of::<INPUT>() as i32) };
     }
 
+    /// True when Edita runs from an MSIX package (the Microsoft Store version).
+    pub fn is_packaged() -> bool {
+        use windows_sys::Win32::Storage::Packaging::Appx::GetCurrentPackageFullName;
+        let mut len: u32 = 0;
+        // ERROR_INSUFFICIENT_BUFFER (122) means there is a package name; APPMODEL_ERROR_NO_PACKAGE (15700) means none.
+        unsafe { GetCurrentPackageFullName(&mut len, std::ptr::null_mut()) == 122 }
+    }
+
     /// How the shortcut that started Edita asks for the window: Some(true) = maximised,
     /// Some(false) = minimised (shortcut Properties > Run).
     pub fn startup_show() -> Option<bool> {
@@ -621,6 +629,12 @@ fn make_default(app: AppHandle) -> RegisterResult {
     }
     #[cfg(windows)]
     {
+        // The Microsoft Store (MSIX) version declares its file types in its package manifest, so
+        // Windows already offers Edita for them: just open Settings > Default apps.
+        if win::is_packaged() {
+            let _ = app.opener().open_url("ms-settings:defaultapps", None::<&str>);
+            return RegisterResult { ok: Some(true), types: Some(FILE_TYPES.len()), error: None };
+        }
         if let Err(e) = register_file_types() {
             return fail(format!("Windows did not accept the registration: {e}"));
         }
