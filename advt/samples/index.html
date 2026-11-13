@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Robotics Courses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Vidyasagar Robotics Academy</h1>
+    <nav>
+      <a href="#courses">Courses</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="courses">
+    <article class="course-card">
+      <h2>Arduino Robotics</h2>
+      <p>Build and program your own robot.</p>
+      <span class="badge">New batch</span>
+    </article>
+  </main>
+
+  <script>
+    document.querySelectorAll('.course-card').forEach((card) => {
+      card.addEventListener('click', () => card.classList.toggle('open'));
+    });
+  </script>
+</body>
+</html>

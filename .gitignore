@@ -1,0 +1,7 @@
+node_modules/
+ui/
+src/generated/
+src-tauri/target/
+src-tauri/gen/
+installer/license.txt
+_electron-*-backup.zip

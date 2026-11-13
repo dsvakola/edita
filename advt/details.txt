@@ -1,0 +1,25 @@
+Edita - The Universal Text & Code Editor for Developers
+
+Edita is a simple yet powerful text and code editor for Windows, created at Vidyasagar Robotics Academy for students, teachers and developers. It brings the speed and elegance of professional code editors to the classroom and the lab, without any learning curve. Open it, start typing, and Edita takes care of the rest.
+
+One editor for every language
+Edita understands C, C++ and Arduino sketches, Python, Java, JavaScript, HTML, CSS, JSON, Markdown, PHP, Rust, VB.NET and assembly language (8085/8086 ALP). Every file is coloured clearly by its extension, so keywords, functions, strings, numbers and comments stand out at a glance. Even in a new, unsaved file Edita recognises the language as you type: start writing void setup() or def main(): and the colours switch to the right language by themselves.
+
+Smart editing that saves time
+Edita indents new lines automatically, lines up closing braces with their opening line, and closes brackets and quotes for you. While you type, it suggests words already used in your file, so long variable and function names never need to be typed twice. Colour values such as #ff6600 or rgb(0, 128, 255) show a small colour square; click it to choose a new colour with a picker. The Find bar at the bottom, just like Sublime Text, finds and replaces text with options for match case, whole word and regular expressions.
+
+Work the way you like
+Open as many files as you need, each in its own tab. Compare two programs side by side with the two-column layout, or drag a tab from one side to the other. The Command Palette (Ctrl+Shift+P) lets you search and run any command by typing a few letters. Edita remembers the files you had open and reopens them the next time you start it, and File > Open Recent lists your recent work.
+
+Beautiful and comfortable
+Choose the Dark theme, inspired by the popular Monokai style with an amber cursor, or the bright, colourful Light theme. In Preferences you can set the font and font size, the indent size and your own colours for the background, text, cursor, selection and current line, and switch each editing helper on or off. Press Ctrl + and Ctrl - to change the text size instantly. Every dialog follows your chosen theme.
+
+Made for classrooms
+Edita is ideal for school and college computer labs, robotics and electronics workshops, and programming courses. Teachers can show code clearly on a projector, and students get a friendly editor that helps them write neat, correctly indented programs. Edita installs in a minute on Windows 10 and 11, works fully offline, and can be made the default editor for text and code files from its Tools menu.
+
+Free and open source
+Edita is free and open-source software released under the Apache License 2.0. It is built on trusted open-source technologies, Electron and CodeMirror.
+
+Developed by: Prof. Dattaraj S. Vidyasagar & Prof. Yash D. Vidyasagar, for Vidyasagar Robotics Academy.
+
+Interested in similar software or a mobile app? We will develop it for you. Contact softinquiry@vsa.edu.in

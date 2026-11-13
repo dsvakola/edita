@@ -1,0 +1,23 @@
+Edita - a simple text/code editor for students, teachers and developers.
+Copyright 2026 Vidyasagar Robotics Academy (https://vsa.edu.in/software/)
+
+Developed by: Prof. Dattaraj S. Vidyasagar & Prof. Yash D. Vidyasagar,
+for Vidyasagar Robotics Academy.
+Website: https://vsa.edu.in/software/
+Email: softinquiry@vsa.edu.in
+
+Edita is free software: you can redistribute it and/or modify it under the terms
+of the GNU General Public License, version 3, as published by the Free Software
+Foundation (see the LICENSE file). Edita is distributed in the hope that it will
+be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Anyone who redistributes Edita, or a work based on it, must keep these copyright
+and credit notices (GPL-3.0, sections 4, 5 and 7(b)), so that credit to the Edita
+developers and Vidyasagar Robotics Academy is preserved.
+
+Edita includes third-party open-source components, each used under its own licence:
+Tauri and the other Rust crates it is built with, CodeMirror and its language
+packages, and the Lezer parser packages. On Windows it shows its window with
+Microsoft Edge WebView2. The full list, with every licence text, is shown in
+Edita under Help > License & Attribution.

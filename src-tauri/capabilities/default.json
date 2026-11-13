@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Edita's main window: events from the Rust side (menu commands, opened files).",
+  "windows": ["main"],
+  "permissions": ["core:default"]
+}

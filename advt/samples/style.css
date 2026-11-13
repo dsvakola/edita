@@ -1,0 +1,35 @@
+/* Course card - academy website */
+:root {
+  --brand: #1f3a68;
+  --accent: #f9a825;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff 0%, #eef4f9 100%);
+  box-shadow: 0 8px 24px rgba(31, 58, 104, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  border: 2px solid var(--accent);
+}
+
+.course-card h2 {
+  color: var(--brand);
+  font-size: 1.4rem;
+  margin: 0 0 8px;
+}
+
+.badge {
+  background-color: #e5484d;
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 600px) {
+  .course-card { padding: 16px; }
+}

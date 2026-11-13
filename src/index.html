@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Edita</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; font-family: "Segoe UI", sans-serif; }
+    /* Windows title bar colours (used by the status bar and the find bar) */
+    :root { --titlebar-bg: #eef4f9; --titlebar-fg: #1b1b1b; --titlebar-border: #d5dbe0; --field-bg: #ffffff; --field-border: #b9c2cb; }
+    @media (prefers-color-scheme: dark) {
+      :root { --titlebar-bg: #202020; --titlebar-fg: #ffffff; --titlebar-border: #2d2d2d; --field-bg: #2b2b2b; --field-border: #4a4a4a; }
+    }
+    body { display: flex; flex-direction: column; background: var(--tab-active-bg, #fff); }
+
+    /* Panes (one, or two side by side), each with a tab bar and an editor */
+    #panes { display: flex; flex: 1; min-height: 0; }
+    .pane { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+    .pane + .pane { border-left: 2px solid var(--border); }
+
+    /* Tab bar */
+    .tabs {
+      display: flex; flex: none; height: 34px; overflow-x: auto; overflow-y: hidden;
+      background: var(--bar-bg); border-bottom: 1px solid var(--border); scrollbar-width: none;
+    }
+    .tab {
+      display: flex; align-items: center; gap: 8px; flex: none; max-width: 220px;
+      margin: 5px 0 0 4px; padding: 0 8px 0 14px; border-radius: 6px 6px 0 0;
+      background: var(--tab-bg); color: var(--bar-fg); font-size: 12.5px; cursor: default; user-select: none;
+    }
+    .tab.active { background: var(--tab-active-bg); color: var(--tab-active-fg); }
+    .pane.focused .tab.active { box-shadow: inset 0 2px 0 var(--accent); }
+    .tab-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .tab-close {
+      width: 16px; height: 16px; border-radius: 3px; display: flex; align-items: center; justify-content: center;
+      font-size: 14px; line-height: 1; opacity: 0.6;
+    }
+    .tab-close::before { content: "\00D7"; }
+    .tab.dirty .tab-close::before { content: "\25CF"; font-size: 10px; color: var(--accent); }
+    .tab.dirty .tab-close:hover::before { content: "\00D7"; font-size: 14px; color: inherit; }
+    .tab-close:hover { opacity: 1; background: rgba(128, 128, 128, 0.3); }
+
+    /* Editor */
+    .editor { flex: 1; min-height: 0; }
+    .cm-editor { height: 100%; font-size: var(--edita-font-size, 15px); }
+    .cm-editor.cm-focused { outline: none; }
+    .cm-scroller { line-height: 1.5; }
+
+    /* Colour swatch shown before #hex / rgb() colours */
+    .cm-color-swatch {
+      display: inline-block; width: 0.8em; height: 0.8em; margin: 0 4px 0 1px; vertical-align: -0.05em;
+      border: 1px solid rgba(128, 128, 128, 0.8); border-radius: 2px; cursor: pointer;
+      background: linear-gradient(var(--swatch), var(--swatch)),
+        repeating-conic-gradient(#ccc 0 25%, #fff 0 50%) 0 0 / 6px 6px;
+    }
+
+    /* Dialogs (Preferences, Help): light border + shadow so they stand out from the window */
+    #prefs-overlay, .dialog-overlay {
+      position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center;
+      background: rgba(0, 0, 0, 0.35);
+    }
+    #prefs, .dialog {
+      width: 460px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; border-radius: 8px;
+      background: var(--bar-bg); color: var(--tab-active-fg);
+      border: 1px solid rgba(0, 0, 0, 0.22); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35); font-size: 13px;
+    }
+    body[data-theme=dark] #prefs, body[data-theme=dark] .dialog {
+      border-color: rgba(255, 255, 255, 0.28); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+    }
+    #prefs h2, .dialog h2 { margin: 0 0 14px; font-size: 17px; font-weight: 600; }
+    #prefs h3, .dialog h3 { margin: 18px 0 8px; font-size: 13px; font-weight: 600; }
+    .dialog button { padding: 4px 12px; }
+    /* Title bar with a close (X) button, like a window */
+    .dialog-titlebar {
+      flex: none; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      height: 34px; padding-left: 16px; font-size: 13px; font-weight: 600;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.25); user-select: none;
+    }
+    .dialog .dialog-x, #prefs .dialog-x {
+      min-width: 0; width: 46px; height: 34px; padding: 0; border: none; border-radius: 0 8px 0 0;
+      background: transparent; color: inherit; font-size: 14px; font-weight: normal;
+    }
+    .dialog .dialog-x:hover, #prefs .dialog-x:hover { background: #e81123; color: #fff; filter: none; }
+    .help-body, .prefs-content { overflow: auto; padding: 6px 22px 0; }
+    .help-dialog .dialog-buttons, .prefs-buttons { flex: none; padding: 12px 22px 16px; }
+    .dialog-buttons { display: flex; margin-top: 16px; }
+    .dialog-buttons .spacer { flex: 1; }
+    .dialog a { color: var(--accent); }
+    .help-dialog { width: 620px; }
+    .help-dialog.help-about { width: 440px; }
+    .help-body table { border-collapse: collapse; margin: 6px 0; }
+    .help-body td { padding: 2px 16px 2px 0; }
+    .help-body td:last-child { font-family: Consolas, monospace; }
+    .help-body code { font-family: Consolas, monospace; }
+    .help-body details { margin: 4px 0; }
+    .help-body h4 { margin: 12px 0 4px; }
+    .help-body summary { cursor: pointer; }
+    .help-body pre { white-space: pre-wrap; font-size: 11.5px; max-height: 220px; overflow: auto;
+      padding: 8px; background: rgba(128, 128, 128, 0.12); border-radius: 4px; }
+    .about { display: flex; gap: 20px; align-items: flex-start; }
+    /* Vidyasagar Robotics Academy logo at the bottom of Help dialogs */
+    .vra-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit !important; font-size: 12.5px; line-height: 1.3; }
+    .vra-brand img { width: 46px; height: 46px; }
+    .vra-brand small { opacity: 0.7; }
+    .help-about .vra-brand img { width: 64px; height: 64px; }
+    .help-dialog .dialog-buttons { align-items: center; border-top: 1px solid rgba(128, 128, 128, 0.25); margin-top: 0; }
+
+    /* Message dialogs (unsaved changes, errors, questions) */
+    .message-dialog { width: 430px; padding: 0; overflow: hidden; }
+    .message-body { display: flex; gap: 14px; padding: 18px 20px 6px; }
+    .message-icon {
+      flex: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 17px; font-weight: bold; color: #fff; background: #4078f2;
+    }
+    .message-icon.warning { background: #f9a825; color: #1e1f1c; }
+    .message-icon.error { background: #e5484d; }
+    .message-text { font-size: 15px; margin-bottom: 6px; }
+    .message-detail { font-size: 12.5px; opacity: 0.8; }
+    .message-dialog .dialog-buttons { gap: 8px; padding: 12px 16px; margin-top: 10px; background: rgba(128, 128, 128, 0.1); }
+    .dialog button {
+      min-width: 86px; padding: 5px 14px; border-radius: 4px; font: inherit; font-size: 13px; cursor: default;
+      border: 1px solid rgba(128, 128, 128, 0.5); background: var(--tab-bg); color: var(--tab-active-fg);
+    }
+    .dialog button:hover { filter: brightness(1.1); }
+    .dialog button:disabled { opacity: 0.4; filter: none; }
+    .dialog button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    body[data-theme=dark] .dialog button.primary { color: #1e1f1c; }
+    .dialog button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* Command palette */
+    .palette-overlay { position: fixed; inset: 0; z-index: 110; display: flex; justify-content: center; align-items: flex-start; }
+    .palette { width: 560px; max-width: 90vw; margin-top: 48px; padding: 8px; }
+    .palette input {
+      width: 100%; box-sizing: border-box; padding: 7px 10px; font: inherit; font-size: 14px; border-radius: 4px;
+      border: 1px solid rgba(128, 128, 128, 0.5); background: var(--tab-active-bg); color: var(--tab-active-fg); outline: none;
+    }
+    .palette input:focus { border-color: var(--accent); }
+    .palette-list { max-height: 360px; overflow: auto; margin-top: 6px; }
+    .palette-item { display: flex; justify-content: space-between; gap: 16px; padding: 6px 10px; border-radius: 4px; }
+    .palette-item.selected { background: var(--accent); color: #fff; }
+    body[data-theme=dark] .palette-item.selected { color: #1e1f1c; }
+    .palette-key { opacity: 0.7; font-family: Consolas, monospace; font-size: 12px; white-space: nowrap; }
+    .palette-empty { padding: 8px 10px; opacity: 0.7; }
+    .about-name { font-size: 22px; font-weight: 600; }
+    .prefs-note { font-weight: normal; opacity: 0.7; }
+    .prefs-grid { display: grid; grid-template-columns: 120px 1fr; gap: 8px 12px; align-items: center; }
+    .prefs-color-row { display: flex; gap: 8px; align-items: center; }
+    .prefs-color-row input[type=color] { width: 48px; height: 24px; padding: 0 2px; border: 1px solid var(--border); background: none; }
+    .prefs-check { display: block; margin: 6px 0; }
+    #prefs select, #prefs input[type=number] { width: 180px; padding: 3px 4px; }
+    #prefs button { padding: 4px 12px; }
+    .prefs-buttons { display: flex; }
+    .prefs-buttons .spacer { flex: 1; }
+
+    /* Status bar: same colour as the Windows title bar (light, or dark when Windows is in dark mode) */
+    #status {
+      display: flex; flex: none; gap: 24px; height: 24px; align-items: center; padding: 0 12px;
+      background: var(--titlebar-bg); color: var(--titlebar-fg); border-top: 1px solid var(--titlebar-border); font-size: 12px;
+    }
+    #status .spacer { flex: 1; }
+  </style>
+</head>
+<body>
+  <div id="panes"></div>
+  <div id="status">
+    <span id="status-pos"></span>
+    <span class="spacer"></span>
+    <span id="status-indent"></span>
+    <span id="status-lang"></span>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

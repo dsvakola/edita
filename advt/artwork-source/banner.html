@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Edita - advertisement banner</title>
+<style>
+@font-face{font-family:Inter;src:url(fonts/inter-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:Inter;src:url(fonts/inter-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Inter;src:url(fonts/inter-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Montserrat;src:url(fonts/montserrat-latin-700-normal.woff2);font-weight:700}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1600px;height:900px;overflow:hidden;font-family:Inter,Segoe UI,Arial,sans-serif}
+.stage{position:relative;width:1600px;height:900px;overflow:hidden;color:#f5f5f0;
+  background:
+   radial-gradient(820px 560px at 1180px 430px, rgba(249,168,37,.28), rgba(249,168,37,0) 64%),
+   radial-gradient(700px 480px at 60px 880px, rgba(174,129,255,.20), rgba(174,129,255,0) 65%),
+   linear-gradient(135deg,#171813 0%,#1f201c 55%,#2a2b24 100%)}
+.grid{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1.5px,transparent 1.6px);background-size:34px 34px;
+  -webkit-mask-image:linear-gradient(90deg,#000,transparent 70%);mask-image:linear-gradient(90deg,#000,transparent 70%)}
+
+/* left column */
+.brand{position:absolute;left:84px;top:62px;display:flex;align-items:center;gap:18px}
+.brand img{width:78px;height:78px;border-radius:18px;box-shadow:0 10px 26px rgba(0,0,0,.5),0 0 0 2px rgba(249,168,37,.55)}
+.brand b{display:block;font-family:Montserrat,Inter;font-size:42px;letter-spacing:.5px;color:#f9a825}
+.brand span{font-size:14px;letter-spacing:2.2px;text-transform:uppercase;color:#cfcfc4;font-weight:600}
+h1{position:absolute;left:84px;top:182px;width:640px;font-family:Montserrat,Inter;font-size:56px;line-height:1.12;font-weight:700;letter-spacing:-.5px}
+h1 .c1{color:#f92672}h1 .c2{color:#a6e22e}h1 .c3{color:#66d9ef}h1 .c4{color:#ae81ff}h1 .c5{color:#f9a825}
+.sub{position:absolute;left:84px;top:402px;width:560px;font-size:21px;line-height:1.5;color:#d9d9cf}
+.chips{position:absolute;left:84px;top:528px;width:600px;display:flex;flex-wrap:wrap;gap:12px}
+.chip{display:flex;align-items:center;gap:9px;padding:10px 16px 10px 12px;border-radius:30px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);font-size:16.5px;font-weight:600}
+.chip i{width:22px;height:22px;border-radius:50%;background:#f9a825;position:relative;flex:none}
+.chip i::after{content:"";position:absolute;left:7px;top:3.5px;width:6px;height:11px;border:solid #1f201c;border-width:0 3px 3px 0;transform:rotate(45deg)}
+.cta{position:absolute;left:84px;top:716px;display:flex;align-items:center;gap:22px}
+.btn{background:#f9a825;color:#1f201c;font-weight:700;font-size:24px;padding:18px 34px;border-radius:14px;box-shadow:0 10px 28px rgba(249,168,37,.35)}
+.url{font-size:20px;font-weight:600}
+.url small{display:block;font-size:14px;color:#a9a99c;font-weight:400;margin-top:3px}
+.credit{position:absolute;left:84px;bottom:34px;display:flex;align-items:center;gap:12px;font-size:14px;color:#a9a99c}
+.credit img{width:34px;height:34px;border-radius:50%}
+.tag{position:absolute;right:64px;top:40px;background:#f9a825;color:#1f201c;font-weight:700;font-size:17px;letter-spacing:1.4px;padding:10px 22px;border-radius:30px;box-shadow:0 8px 22px rgba(0,0,0,.4)}
+
+/* window mock-ups made from the real screenshots */
+.win{position:absolute;border-radius:10px;overflow:hidden;background:#222}
+.win img{display:block;width:100%}
+.w-back{left:930px;top:112px;width:610px;transform:rotate(4deg);box-shadow:0 30px 60px rgba(0,0,0,.55)}
+.w-main{left:690px;top:218px;width:770px;transform:perspective(1800px) rotateY(-5deg) rotate(-1.5deg);box-shadow:0 40px 80px rgba(0,0,0,.65),0 0 0 2px rgba(249,168,37,.35)}
+.w-front{left:1020px;top:548px;width:540px;transform:rotate(2.5deg);box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 0 2px rgba(255,255,255,.12)}
+
+/* floating cards */
+.card{position:absolute;border-radius:16px;box-shadow:0 26px 54px rgba(0,0,0,.55)}
+.sw{left:700px;top:640px;width:300px;padding:14px 18px 16px;background:#272822;border:1px solid rgba(249,168,37,.55);transform:rotate(-3deg);font-family:Consolas,"Courier New",monospace;font-size:15px;line-height:1.75;color:#f8f8f2}
+.sw h4{font-family:Inter,Arial;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;color:#f9a825;margin-bottom:6px}
+.sw .k{color:#66d9ef}.sw .v{color:#e6db74}
+.sw i{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px;border:1px solid rgba(255,255,255,.35)}
+.pal{left:1225px;top:98px;width:290px;padding:10px;background:#2b2c26;border:1px solid rgba(255,255,255,.18);transform:rotate(3deg);font-size:14.5px}
+.pal .in{border:1.5px solid #f9a825;border-radius:7px;padding:8px 10px;color:#fff;margin-bottom:6px;background:#1f201c}
+.pal .r{padding:7px 10px;border-radius:6px;color:#f5f5f0}
+.pal .on{background:#ff9a1f;color:#1f201c;font-weight:600}
+.pal small{display:block;text-align:right;font-size:11.5px;color:#a9a99c;margin-top:6px}
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="grid"></div>
+  <div class="tag">FREE &nbsp;&middot;&nbsp; OPEN SOURCE</div>
+
+  <div class="brand"><img src="edita-logo.png" alt=""><div><b>Edita</b><span>Text &amp; Code Editor</span></div></div>
+  <h1>Write code.<br>See it <span class="c1">in</span> <span class="c2">full</span> <span class="c3">colour</span><span class="c5">.</span></h1>
+  <p class="sub">A fast, clean text and code editor for students, teachers and developers, with tabs, side-by-side editing and Dark and Light themes.</p>
+  <div class="chips">
+    <div class="chip"><i></i>12 languages</div>
+    <div class="chip"><i></i>Tabs &amp; split view</div>
+    <div class="chip"><i></i>Word suggestions</div>
+    <div class="chip"><i></i>Colour swatches</div>
+    <div class="chip"><i></i>Dark &amp; Light themes</div>
+    <div class="chip"><i></i>Works offline</div>
+  </div>
+  <div class="cta"><div class="btn">Download Edita FREE</div><div class="url">vsa.edu.in/software<small>Windows installer &middot; Apache License 2.0</small></div></div>
+  <div class="credit"><img src="vra-logo.png" alt="">Designed and developed by Vidyasagar Robotics Academy, Akola</div>
+
+  <div class="win w-back"><img src="../screenshots/17-light-theme-tabs-overview.png" alt=""></div>
+  <div class="win w-main"><img src="../screenshots/01-dark-theme-arduino-code-with-tabs.png" alt=""></div>
+  <div class="win w-front"><img src="../screenshots/07-split-view-compare-code.png" alt=""></div>
+
+  <div class="card pal"><div class="in">theme</div><div class="r on">View &rsaquo; Theme &rsaquo; Light</div><div class="r">View &rsaquo; Theme &rsaquo; Dark (default)</div><small>Command Palette &middot; Ctrl+Shift+P</small></div>
+  <div class="card sw"><h4>Colour swatches</h4>
+    <div><span class="k">color</span>: <i style="background:#f9a825"></i><span class="v">#f9a825</span>;</div>
+    <div><span class="k">fill</span>: <i style="background:rgb(0,128,255)"></i><span class="v">rgb(0, 128, 255)</span>;</div>
+    <div><span class="k">border</span>: <i style="background:hsl(150,60%,40%)"></i><span class="v">hsl(150, 60%, 40%)</span>;</div>
+  </div>
+</div>
+</body>
+</html>
