@@ -1,6 +1,6 @@
 {
-  "_comment": "Microsoft Store identity for the MSIX package. REPLACE the three PLACEHOLDER values with the ones in Partner Center > Edita > Product management > Product identity, then run: pnpm run msix",
-  "identityName": "PLACEHOLDER.Edita",
-  "publisher": "CN=PLACEHOLDER-PUBLISHER-ID",
-  "publisherDisplayName": "Vidyasagar Robotics Academy"
+    "_comment":  "Microsoft Store identity for the MSIX package, from Partner Center \u003e Edita \u003e Product management \u003e Product identity (Store ID 9NX9LHR4BT68). Rebuild with: pnpm run msix",
+    "identityName":  "VidyasagarAcademy.Edita",
+    "publisher":  "CN=E5EAB892-17BA-4AC0-A205-3AE9F2BA13DD",
+    "publisherDisplayName":  "Vidyasagar Academy"
 }

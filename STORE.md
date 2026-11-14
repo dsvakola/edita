@@ -1,6 +1,9 @@
 # Publishing Edita on the Microsoft Store
 
-Nothing has been submitted yet. The listing text, screenshots, logos and a step-by-step Partner Center
+**Store ID:** 9NX9LHR4BT68 · **Package Family Name:** VidyasagarAcademy.Edita_z3tqm701my9nc
+· **Store page (after publishing):** https://apps.microsoft.com/detail/9NX9LHR4BT68
+
+The listing text, screenshots, logos and a step-by-step Partner Center
 checklist are in [`store-listing/`](store-listing/).
 
 ## Recommendation: submit as MSIX
@@ -16,9 +19,11 @@ checklist are in [`store-listing/`](store-listing/).
 MSIX is cheaper (no certificate), simpler for students and school labs (no admin rights needed) and
 updates itself. The only extra work is packaging, which `pnpm run msix` does.
 
-## The three values we need from Partner Center
+## Store identity (from Partner Center › Product management › Product identity)
 
-After reserving the name "Edita", open **Product management › Product identity** and copy:
+Already filled in `installer/msix-identity.json`: Name `VidyasagarAcademy.Edita`,
+Publisher `CN=E5EAB892-17BA-4AC0-A205-3AE9F2BA13DD`, Publisher display name `Vidyasagar Academy`.
+They map as follows:
 
 1. **Package/Identity/Name** → `identityName` in `installer/msix-identity.json`
 2. **Package/Identity/Publisher** (starts with `CN=`) → `publisher`
@@ -47,6 +52,9 @@ Settings › Default apps).
 - Accurate description and screenshots of the current version: **yes** (`store-listing/`).
 - Stable: tested editing, tabs, split view, Find, Command Palette, themes, Preferences, Help pages,
   Open and Save As dialogs, single window, files given on the command line, unsaved-changes prompt.
+- MSIX 1.3.0.0 tested (installed locally in Developer Mode): starts, opens files, double-click on a
+  .c / .md file opens it in Edita (one window, new tab), settings kept in the package's own folder,
+  uninstall removes the app, its settings and its file associations.
 - Windows App Certification Kit: to run on the MSIX before submission (needs an administrator
   prompt): `appcert.exe test -appxpackagepath msix\Edita_1.3.0_x64.msix -reportoutputpath wack.xml`
   — Partner Center runs the same checks on upload.
