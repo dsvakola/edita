@@ -15,10 +15,10 @@ Beautiful and comfortable
 Choose the Dark theme, inspired by the popular Monokai style with an amber cursor, or the bright, colourful Light theme. In Preferences you can set the font and font size, the indent size and your own colours for the background, text, cursor, selection and current line, and switch each editing helper on or off. Press Ctrl + and Ctrl - to change the text size instantly. Every dialog follows your chosen theme.
 
 Made for classrooms
-Edita is ideal for school and college computer labs, robotics and electronics workshops, and programming courses. Teachers can show code clearly on a projector, and students get a friendly editor that helps them write neat, correctly indented programs. Edita installs in a minute on Windows 10 and 11, works fully offline, and can be made the default editor for text and code files from its Tools menu.
+Edita is ideal for school and college computer labs, robotics and electronics workshops, and programming courses. Teachers can show code clearly on a projector, and students get a friendly editor that helps them write neat, correctly indented programs. Edita installs in a minute on Windows 10 and 11, works fully offline, and can be made the default editor for text and code files from its Tools menu. Edita will soon be available on the Microsoft Store.
 
 Free and open source
-Edita is free and open-source software released under the Apache License 2.0. It is built on trusted open-source technologies, Electron and CodeMirror.
+Edita is free and open-source software released under the GNU General Public License v3.0. Version 1.3.1 is built with Tauri and Rust around the trusted CodeMirror editor, so the download is under 2 MB and Edita starts fast and uses little memory. It has no accounts, no advertising and no tracking. Source code: https://github.com/dsvakola/edita
 
 Developed by: Prof. Dattaraj S. Vidyasagar & Prof. Yash D. Vidyasagar, for Vidyasagar Academy.
 

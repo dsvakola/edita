@@ -1,8 +1,7 @@
 # Edita
 
 A simple text/code editor for students, teachers and developers, by Vidyasagar Academy.
-Built with Tauri 2 (Rust) and CodeMirror 6. Version 1.3.0 replaced the Electron engine of 1.2.x,
-so Edita is now much smaller to download and uses much less memory.
+Built with Tauri 2 (Rust) and CodeMirror 6, so Edita is small to download and uses little memory.
 
 ## Run
 
@@ -22,8 +21,7 @@ pnpm start
 pnpm run dist
 ```
 
-This creates `src-tauri/target/release/bundle/nsis/Edita_<version>_x64-setup.exe` (about 1.8 MB;
-the Electron version 1.2.14 took about 106 MB). Edita uses Microsoft Edge WebView2, which is part of
+This creates `src-tauri/target/release/bundle/nsis/Edita_<version>_x64-setup.exe` (about 1.8 MB). Edita uses Microsoft Edge WebView2, which is part of
 Windows 10 and 11; the installer downloads it only if it is missing. The installer lets the user pick the
 install folder and adds Start menu and desktop shortcuts. It is not code-signed yet, so Windows SmartScreen
 shows "Windows protected your PC" the first time: click **More info › Run anyway**.
