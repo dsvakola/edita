@@ -1,5 +1,5 @@
-# Draws the installer images (24-bit BMP, as NSIS needs) with Edita's logo, the Vidyasagar Robotics
-# Academy logo (logo.png) and the developer credits: installer/sidebar.bmp (Welcome / Finish pages)
+# Draws the installer images (24-bit BMP, as NSIS needs) with Edita's logo, the Vidyasagar Academy
+# logo (logo.png) and the developer credits: installer/sidebar.bmp (Welcome / Finish pages)
 # and installer/header.bmp (other pages). Drawn at 2x; the installer shrinks them to fit sharply.
 # Run: pnpm run art
 param([string]$Version = (Get-Content (Join-Path $PSScriptRoot '..\package.json') -Raw | ConvertFrom-Json).version)
@@ -49,7 +49,7 @@ Draw 164 314 {
   Text $g 'Prof. Dattaraj S. Vidyasagar' 11 $white 0 214 164 $centre
   Text $g '& Prof. Yash D. Vidyasagar' 11 $white 0 230 164 $centre
   Text $g 'for Vidyasagar' 13 $amber 0 252 164 $centre
-  Text $g 'Robotics Academy' 13 $amber 0 270 164 $centre
+  Text $g 'Academy' 13 $amber 0 270 164 $centre
   Text $g 'vsa.edu.in/software' 11 $soft 0 292 164 $centre
 } (Join-Path $out 'sidebar.bmp')
 

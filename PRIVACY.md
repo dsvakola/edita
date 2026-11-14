@@ -3,7 +3,7 @@
 **Effective date:** 13 November 2026
 **Applies to:** Edita 1.3.0 and later, for Windows (including copies installed from the Microsoft Store)
 
-Edita is a text and code editor developed by Prof. Dattaraj S. Vidyasagar & Prof. Yash D. Vidyasagar, for Vidyasagar Robotics Academy.
+Edita is a text and code editor developed by Prof. Dattaraj S. Vidyasagar & Prof. Yash D. Vidyasagar, for Vidyasagar Academy.
 
 ## Summary
 
@@ -47,6 +47,6 @@ If this policy changes, the new version will be published at the same address wi
 
 ## Contact
 
-Vidyasagar Robotics Academy
+Vidyasagar Academy
 Website: https://vsa.edu.in/software/
 Email: softinquiry@vsa.edu.in

@@ -1,5 +1,5 @@
 ; 8085 program: add two 8-bit numbers and store the result
-; Vidyasagar Robotics Academy - microprocessor lab
+; Vidyasagar Academy - microprocessor lab
 
         ORG 2000H
 START:  LDA 2050H       ; first number

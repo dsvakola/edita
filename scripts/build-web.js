@@ -105,7 +105,7 @@ function rustCrates(texts) {
 
   fs.mkdirSync(path.join(ui, 'assets'), { recursive: true });
   fs.copyFileSync(path.join(root, 'src', 'index.html'), path.join(ui, 'index.html'));
-  // Edita's own logo (About box) and the Vidyasagar Robotics Academy logo (Help windows).
+  // Edita's own logo (About box) and the Vidyasagar Academy logo (Help windows).
   fs.copyFileSync(path.join(root, 'assets', 'icon.png'), path.join(ui, 'assets', 'icon.png'));
   fs.copyFileSync(path.join(root, 'logo.png'), path.join(ui, 'assets', 'vra-logo.png'));
   const size = fs.statSync(path.join(ui, 'renderer.js')).size;

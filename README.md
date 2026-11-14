@@ -1,6 +1,6 @@
 # Edita
 
-A simple text/code editor for students, teachers and developers, by Vidyasagar Robotics Academy.
+A simple text/code editor for students, teachers and developers, by Vidyasagar Academy.
 Built with Tauri 2 (Rust) and CodeMirror 6. Version 1.3.0 replaced the Electron engine of 1.2.x,
 so Edita is now much smaller to download and uses much less memory.
 
@@ -110,7 +110,7 @@ Edita picks the syntax from the file extension. You can change it with View > Sy
 - `scripts/make-installer-art.ps1`, `scripts/installer-license.js`, `installer/hooks.nsh`: installer images,
   licence page and uninstall cleanup
 - `assets/icon.png`: the app icon (epsilon logo). To change it, replace this file and run `pnpm run icons`.
-- `logo.png`: the Vidyasagar Robotics Academy logo (installer, About and Help)
+- `logo.png`: the Vidyasagar Academy logo (installer, About and Help)
 - `PRIVACY.md`: privacy policy
 
 ## Status
@@ -121,8 +121,8 @@ step 4 (split view, Help pages, Windows installer), step 5 (1.3.0: Tauri/Rust en
 ## License
 
 Edita is free and open-source software under the [GNU General Public License v3.0](LICENSE).
-Developed by Prof. Dattaraj S. Vidyasagar & Prof. Yash D. Vidyasagar, for Vidyasagar Robotics Academy.
-Copyright 2026 Vidyasagar Robotics Academy (https://vsa.edu.in/software/, softinquiry@vsa.edu.in).
+Developed by Prof. Dattaraj S. Vidyasagar & Prof. Yash D. Vidyasagar, for Vidyasagar Academy.
+Copyright 2026 Vidyasagar Academy (https://vsa.edu.in/software/, softinquiry@vsa.edu.in).
 Anyone redistributing Edita must keep the copyright and credit notices in [NOTICE](NOTICE).
 Third-party components and their licences are listed in Help > License & Attribution.
 See also the [Privacy Policy](PRIVACY.md).

@@ -1,8 +1,8 @@
 [package]
 name = "edita"
-version = "1.3.0"
+version = "1.3.1"
 description = "Edita - a simple text/code editor for students, teachers and developers"
-authors = ["Prof. Dattaraj S. Vidyasagar", "Prof. Yash D. Vidyasagar", "Vidyasagar Robotics Academy <softinquiry@vsa.edu.in>"]
+authors = ["Prof. Dattaraj S. Vidyasagar", "Prof. Yash D. Vidyasagar", "Vidyasagar Academy <softinquiry@vsa.edu.in>"]
 license = "GPL-3.0-only"
 homepage = "https://vsa.edu.in/software/"
 edition = "2021"

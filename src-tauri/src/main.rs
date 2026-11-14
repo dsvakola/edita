@@ -667,7 +667,7 @@ fn register_file_types() -> std::io::Result<()> {
     let (supported, _) = cls.create_subkey(format!(r"{appkey}\SupportedTypes"))?;
     let (caps, _) = hkcu.create_subkey(r"Software\Edita\Capabilities")?;
     caps.set_value("ApplicationName", &"Edita")?;
-    caps.set_value("ApplicationDescription", &"A simple text editor by Vidyasagar Robotics Academy")?;
+    caps.set_value("ApplicationDescription", &"A simple text editor by Vidyasagar Academy")?;
     caps.set_value("ApplicationIcon", &format!("{exe_s},0"))?;
     let (assoc, _) = caps.create_subkey("FileAssociations")?;
     for t in FILE_TYPES {

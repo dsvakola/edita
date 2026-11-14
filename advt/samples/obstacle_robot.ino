@@ -1,4 +1,4 @@
-// Obstacle-avoiding robot - Vidyasagar Robotics Academy
+// Obstacle-avoiding robot - Vidyasagar Academy
 #include <Servo.h>
 
 #define TRIG_PIN   9

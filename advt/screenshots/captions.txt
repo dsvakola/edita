@@ -15,6 +15,6 @@ Edita gallery - captions and alt text (file | caption | alt text)
 13-preferences.png | Preferences: theme, font, size, indent, colours and editing helpers | Edita Preferences window with theme, font, font size, editor colours and editing options
 14-help-documentation.png | Built-in documentation with all shortcuts | Edita Help Documentation window listing files, tabs and editing shortcuts
 15-license-and-attribution.png | Free and open source under the Apache License 2.0 | Edita License and Attribution window showing the Apache License 2.0 and credits
-16-about-edita.png | About Edita - developed for Vidyasagar Robotics Academy | Edita About window with the Edita logo, version, developers, website and the Vidyasagar Robotics Academy logo
+16-about-edita.png | About Edita - developed for Vidyasagar Academy | Edita About window with the Edita logo, version, developers, website and the Vidyasagar Academy logo
 17-light-theme-tabs-overview.png | Light theme with many files open in tabs | Edita in Light theme with an HTML file and many tabs open
-18-installer-welcome-page.png | Simple Windows installer | Edita Setup welcome page with the Edita and Vidyasagar Robotics Academy logos
+18-installer-welcome-page.png | Simple Windows installer | Edita Setup welcome page with the Edita and Vidyasagar Academy logos

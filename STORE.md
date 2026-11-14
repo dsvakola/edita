@@ -52,11 +52,11 @@ Settings › Default apps).
 - Accurate description and screenshots of the current version: **yes** (`store-listing/`).
 - Stable: tested editing, tabs, split view, Find, Command Palette, themes, Preferences, Help pages,
   Open and Save As dialogs, single window, files given on the command line, unsaved-changes prompt.
-- MSIX 1.3.0.0 tested (installed locally in Developer Mode): starts, opens files, double-click on a
+- MSIX tested (installed locally in Developer Mode): starts, opens files, double-click on a
   .c / .md file opens it in Edita (one window, new tab), settings kept in the package's own folder,
   uninstall removes the app, its settings and its file associations.
 - Windows App Certification Kit: to run on the MSIX before submission (needs an administrator
-  prompt): `appcert.exe test -appxpackagepath msix\Edita_1.3.0_x64.msix -reportoutputpath wack.xml`
+  prompt): `appcert.exe test -appxpackagepath msix\Edita_1.3.1_x64.msix -reportoutputpath wack.xml`
   — Partner Center runs the same checks on upload.
 
 ## If you ever submit the EXE instead

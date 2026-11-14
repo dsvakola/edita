@@ -5,7 +5,7 @@ Everything to paste is in `listing.md` in this folder. Images are in `screenshot
 ## A. One-time account set-up
 1. Open https://partner.microsoft.com/dashboard and sign in with the Microsoft account you want to own Edita.
 2. If you do not have a developer account yet: **Apps and games › Get started**, choose
-   **Company** (Vidyasagar Robotics Academy) or **Individual**, fill in the details and finish the sign-up.
+   **Company** (Vidyasagar Academy) or **Individual**, fill in the details and finish the sign-up.
    Company accounts are checked by Microsoft and this can take a few days.
 
 ## B. Reserve the name
@@ -16,17 +16,17 @@ Everything to paste is in `listing.md` in this folder. Images are in `screenshot
 ## C. Send us the three identity values (needed to build the Store package)
 5. In the new product, open **Product management › Product identity**.
 6. Copy these three lines exactly and send them to us:
-   - **Package/Identity/Name** (looks like `12345VidyasagarRobotics.Edita`)
+   - **Package/Identity/Name** (looks like `12345VidyasagarAcademy.Edita`)
    - **Package/Identity/Publisher** (looks like `CN=1A2B3C4D-....`)
-   - **Package/Properties/PublisherDisplayName** (for example `Vidyasagar Robotics Academy`)
-7. We put them in `installer/msix-identity.json`, build `Edita_1.3.0_x64.msix` and give you the file.
+   - **Package/Properties/PublisherDisplayName** (for example `Vidyasagar Academy`)
+7. We put them in `installer/msix-identity.json`, build `Edita_1.3.1_x64.msix` and give you the file.
 
 ## D. Fill in the submission (Start your submission)
 8. **Pricing and availability**: Free, all markets, public. Save.
 9. **Properties**: Category **Developer tools**; privacy policy URL, website and support e-mail from
    `listing.md`; answer "collects personal information" with **No**. Save.
 10. **Age ratings**: start the questionnaire and answer as in `listing.md` (all **No**). Save.
-11. **Packages**: drag in `Edita_1.3.0_x64.msix`. Wait until it shows as validated. Save.
+11. **Packages**: drag in `Edita_1.3.1_x64.msix`. Wait until it shows as validated. Save.
 12. **Store listings › English (United States)**: paste the description, short description,
     what's new, features and search terms; upload the screenshots (in order) and the logos. Save.
 13. **Submission options**: leave as is (publish as soon as certified). In **Notes for certification**

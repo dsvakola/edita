@@ -104,10 +104,10 @@ async function aboutHtml(api) {
         <div>Version ${escapeHtml(version)}</div>
         <p>A simple text/code editor for students, teachers and developers.</p>
         <p>Developed by: Prof. Dattaraj S. Vidyasagar &amp; Prof. Yash D. Vidyasagar,
-        for Vidyasagar Robotics Academy.</p>
+        for Vidyasagar Academy.</p>
         <p>Website: <a href="${WEBSITE}">${WEBSITE}</a><br>
         Email: <a href="mailto:${EMAIL}">${EMAIL}</a></p>
-        <p>© 2026 Vidyasagar Robotics Academy</p>
+        <p>© 2026 Vidyasagar Academy</p>
         <p>Free and open source under the GNU General Public License v3.0.<br>See Help › License &amp; Attribution.</p>
         <p><a href="${PRIVACY_URL}">Privacy Policy</a></p>
       </div>
@@ -126,7 +126,7 @@ export async function openHelp(kind, api) {
       <div class="help-body">${body}</div>
       <div class="dialog-buttons">
         <a class="vra-brand" href="${WEBSITE}" title="${WEBSITE}"><img src="assets/vra-logo.png" alt="">
-          <span>Vidyasagar Robotics Academy<br><small>vsa.edu.in/software</small></span></a>
+          <span>Vidyasagar Academy<br><small>vsa.edu.in/software</small></span></a>
         <span class="spacer"></span><button type="button" class="help-close">Close</button>
       </div>
     </div>`;

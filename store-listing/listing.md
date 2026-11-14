@@ -7,10 +7,10 @@ Language: English (United States). Paste each block into the field with the same
 Edita
 
 ## Short description  [max 1,000 characters — used on Windows 10/11 listing headers]
-Edita is a fast, simple text and code editor for students, teachers and developers. It colours C, C++, Arduino, Python, Java, JavaScript, HTML, CSS, JSON, Markdown, PHP, Rust, VB.NET and 8085/8086 assembly code, indents for you, closes brackets, suggests words, and lets you compare two files side by side. Dark and Light themes, a Command Palette, and it works fully offline. Free and open source, from Vidyasagar Robotics Academy.
+Edita is a fast, simple text and code editor for students, teachers and developers. It colours C, C++, Arduino, Python, Java, JavaScript, HTML, CSS, JSON, Markdown, PHP, Rust, VB.NET and 8085/8086 assembly code, indents for you, closes brackets, suggests words, and lets you compare two files side by side. Dark and Light themes, a Command Palette, and it works fully offline. Free and open source, from Vidyasagar Academy.
 
 ## Description  [max 10,000 characters]
-Edita is a simple yet powerful text and code editor for Windows, created at Vidyasagar Robotics Academy for students, teachers and developers. It brings the speed and elegance of professional code editors to the classroom and the lab, without any learning curve. Open it, start typing, and Edita takes care of the rest.
+Edita is a simple yet powerful text and code editor for Windows, created at Vidyasagar Academy for students, teachers and developers. It brings the speed and elegance of professional code editors to the classroom and the lab, without any learning curve. Open it, start typing, and Edita takes care of the rest.
 
 ONE EDITOR FOR EVERY LANGUAGE
 Edita understands C, C++ and Arduino sketches, Python, Java, JavaScript, HTML, CSS, JSON, Markdown, PHP, Rust, VB.NET and assembly language (8085/8086 ALP). Every file is coloured clearly by its extension, so keywords, functions, strings, numbers and comments stand out at a glance. Even in a new, unsaved file Edita recognises the language as you type: start writing void setup() or def main(): and the colours switch to the right language by themselves.
@@ -33,11 +33,11 @@ Edita is ideal for school and college computer labs, robotics and electronics wo
 FREE AND OPEN SOURCE
 Edita is free and open-source software released under the GNU General Public License v3.0. Source code: https://github.com/dsvakola/edita
 
-Developed by: Prof. Dattaraj S. Vidyasagar & Prof. Yash D. Vidyasagar, for Vidyasagar Robotics Academy.
+Developed by: Prof. Dattaraj S. Vidyasagar & Prof. Yash D. Vidyasagar, for Vidyasagar Academy.
 Website: https://vsa.edu.in/software/ · Email: softinquiry@vsa.edu.in
 
 ## What's new in this version  [max 1,500 characters]
-Edita 1.3.0: rebuilt on a new, lightweight engine. Edita is now a much smaller download, starts faster and uses far less memory, with the same editor, themes and features you know. Edita is now licensed under the GNU GPL v3.0, and Help and About link to the new privacy policy.
+Edita 1.3.1: rebuilt on a new, lightweight engine. Edita is now a much smaller download, starts faster and uses far less memory, with the same editor, themes and features you know. Edita is now licensed under the GNU GPL v3.0, and Help and About link to the new privacy policy.
 
 ## Product features  [up to 20 items, max 200 characters each]
 1. Syntax colouring for C, C++, Arduino, Python, Java, JavaScript, HTML, CSS, JSON, Markdown, PHP, Rust, VB.NET and 8085/8086 assembly
@@ -82,8 +82,8 @@ From `store-listing/logos`:
 - `poster-art-720x1080.png` — 2:3 poster art (720x1080)
 
 ## Additional information
-- Copyright and trademark info: © 2026 Vidyasagar Robotics Academy
-- Developed by: Prof. Dattaraj S. Vidyasagar & Prof. Yash D. Vidyasagar, for Vidyasagar Robotics Academy
+- Copyright and trademark info: © 2026 Vidyasagar Academy
+- Developed by: Prof. Dattaraj S. Vidyasagar & Prof. Yash D. Vidyasagar, for Vidyasagar Academy
 - Website: https://vsa.edu.in/software/
 - Support contact info: softinquiry@vsa.edu.in
 - Privacy policy URL: https://github.com/dsvakola/edita/blob/main/PRIVACY.md

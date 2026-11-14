@@ -1,6 +1,6 @@
 Edita - The Universal Text & Code Editor for Developers
 
-Edita is a simple yet powerful text and code editor for Windows, created at Vidyasagar Robotics Academy for students, teachers and developers. It brings the speed and elegance of professional code editors to the classroom and the lab, without any learning curve. Open it, start typing, and Edita takes care of the rest.
+Edita is a simple yet powerful text and code editor for Windows, created at Vidyasagar Academy for students, teachers and developers. It brings the speed and elegance of professional code editors to the classroom and the lab, without any learning curve. Open it, start typing, and Edita takes care of the rest.
 
 One editor for every language
 Edita understands C, C++ and Arduino sketches, Python, Java, JavaScript, HTML, CSS, JSON, Markdown, PHP, Rust, VB.NET and assembly language (8085/8086 ALP). Every file is coloured clearly by its extension, so keywords, functions, strings, numbers and comments stand out at a glance. Even in a new, unsaved file Edita recognises the language as you type: start writing void setup() or def main(): and the colours switch to the right language by themselves.
@@ -20,6 +20,6 @@ Edita is ideal for school and college computer labs, robotics and electronics wo
 Free and open source
 Edita is free and open-source software released under the Apache License 2.0. It is built on trusted open-source technologies, Electron and CodeMirror.
 
-Developed by: Prof. Dattaraj S. Vidyasagar & Prof. Yash D. Vidyasagar, for Vidyasagar Robotics Academy.
+Developed by: Prof. Dattaraj S. Vidyasagar & Prof. Yash D. Vidyasagar, for Vidyasagar Academy.
 
 Interested in similar software or a mobile app? We will develop it for you. Contact softinquiry@vsa.edu.in

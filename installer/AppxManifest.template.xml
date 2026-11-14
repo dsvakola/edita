@@ -15,7 +15,7 @@
     <DisplayName>Edita</DisplayName>
     <PublisherDisplayName>{{PUBLISHER_DISPLAY_NAME}}</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
-    <Description>Edita - a simple text/code editor for students, teachers and developers. Developed by Prof. Dattaraj S. Vidyasagar &amp; Prof. Yash D. Vidyasagar, for Vidyasagar Robotics Academy.</Description>
+    <Description>Edita - a simple text/code editor for students, teachers and developers. Developed by Prof. Dattaraj S. Vidyasagar &amp; Prof. Yash D. Vidyasagar, for Vidyasagar Academy.</Description>
   </Properties>
 
   <Dependencies>
