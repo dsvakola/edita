@@ -1,4 +1,4 @@
-Edita gallery - captions and alt text (file | caption | alt text)
+Edita 1.3.1 gallery - captions and alt text (file | caption | alt text). All images 1920x1080.
 
 01-dark-theme-arduino-code-with-tabs.png | Dark theme with colourful Arduino code and several files open in tabs | Edita editor in Dark theme showing an Arduino obstacle-avoiding robot sketch with syntax highlighting and file tabs
 02-light-theme-python.png | Light theme with a Python program | Edita editor in Light theme showing a Python temperature logger with coloured keywords and strings
@@ -6,15 +6,14 @@ Edita gallery - captions and alt text (file | caption | alt text)
 04-light-theme-css-colour-swatches.png | CSS with colour squares next to every colour value | Edita showing a CSS file in Light theme with small colour swatches beside hex and rgb colour values
 05-dark-theme-css-colour-swatches.png | Colour swatches in the Dark theme - click one to pick a new colour | Edita showing a CSS file in Dark theme with colour swatches next to colour codes
 06-dark-theme-java.png | Java program in the Dark theme | Edita showing a Java calculator program with syntax highlighting in the Dark theme
-07-split-view-compare-code.png | Side-by-side view to compare two versions of a program | Edita in two-column layout comparing two versions of an Arduino robot sketch
-08-split-view-rust-and-8085-assembly.png | Rust and 8085 assembly side by side in the Light theme | Edita split view with a Rust program on the left and an 8085 assembly program on the right
+07-split-view-compare-code.png | Side-by-side view: compare two files | Edita in two-column layout with a Python program on the left and an HTML page on the right
+08-split-view-rust-and-8085-assembly.png | 8085 assembly and Rust side by side | Edita split view with an 8085 assembly program on the left and a Rust program on the right
 09-dark-theme-php.png | PHP code in the Dark theme | Edita showing a PHP form handler with syntax highlighting
-10-word-suggestions-and-auto-syntax.png | Word suggestions while typing; the language is recognised automatically in a new file | Edita suggesting the word digitalWrite while typing in a new file that it recognised as Arduino C/C++
-11-find-bar-at-the-bottom.png | Find and Replace bar at the bottom, like Sublime Text | Edita with the Find bar open at the bottom, highlighting matches of the word distance
+10-word-suggestions-and-auto-syntax.png | Word suggestions while typing; the language is recognised automatically in a new file | Edita suggesting the word temperature while typing in a new file that it recognised as Python
+11-find-bar-at-the-bottom.png | Find and Replace bar at the bottom | Edita with the Find bar open at the bottom, searching for the word double in a Java program
 12-command-palette.png | Command Palette (Ctrl+Shift+P): find and run any command by typing | Edita Command Palette listing theme commands after typing theme
 13-preferences.png | Preferences: theme, font, size, indent, colours and editing helpers | Edita Preferences window with theme, font, font size, editor colours and editing options
 14-help-documentation.png | Built-in documentation with all shortcuts | Edita Help Documentation window listing files, tabs and editing shortcuts
-15-license-and-attribution.png | Free and open source under the Apache License 2.0 | Edita License and Attribution window showing the Apache License 2.0 and credits
-16-about-edita.png | About Edita - developed for Vidyasagar Academy | Edita About window with the Edita logo, version, developers, website and the Vidyasagar Academy logo
-17-light-theme-tabs-overview.png | Light theme with many files open in tabs | Edita in Light theme with an HTML file and many tabs open
-18-installer-welcome-page.png | Simple Windows installer | Edita Setup welcome page with the Edita and Vidyasagar Academy logos
+15-license-and-attribution.png | Free and open source under the GNU GPL v3.0 | Edita License and Attribution window showing the GNU GPL v3.0, credits and third-party licences
+16-about-edita.png | About Edita - developed for Vidyasagar Academy | Edita About window with the Edita logo, version 1.3.1, developers, website, privacy policy link and the Vidyasagar Academy logo
+17-light-theme-tabs-overview.png | Light theme with many files open in tabs | Edita in Light theme with an Arduino sketch and many tabs open
