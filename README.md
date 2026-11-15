@@ -1,9 +1,15 @@
 # Edita
 
+<a href="https://apps.microsoft.com/detail/9nx9lhr4bt68"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200" alt="Get it from Microsoft"/></a>
+
 A simple text/code editor for students, teachers and developers, by Vidyasagar Academy.
 Built with Tauri 2 (Rust) and CodeMirror 6, so Edita is small to download and uses little memory.
 
-## Run
+## Install
+
+Install from the Microsoft Store: https://apps.microsoft.com/detail/9nx9lhr4bt68
+
+## Run from source
 
 Requires Node.js 22.12 or newer, pnpm, and Rust (stable, MSVC toolchain) with the
 [Tauri 2 prerequisites](https://v2.tauri.app/start/prerequisites/) for Windows.

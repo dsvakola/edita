@@ -1,7 +1,9 @@
 # Publishing Edita on the Microsoft Store
 
+**Published on the Microsoft Store** since 2026-11-15 (version 1.3.1).
+
 **Store ID:** 9NX9LHR4BT68 · **Package Family Name:** VidyasagarAcademy.Edita_z3tqm701my9nc
-· **Store page (after publishing):** https://apps.microsoft.com/detail/9NX9LHR4BT68
+· **Store page:** https://apps.microsoft.com/detail/9nx9lhr4bt68
 
 The listing text, screenshots, logos and a step-by-step Partner Center
 checklist are in [`store-listing/`](store-listing/).
